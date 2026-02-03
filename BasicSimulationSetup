@@ -20,7 +20,6 @@ IdealLeftAtrium13.0KNotTriangle
 LeftAtriumRealBase
 LeftAtriumRealPartialAppendage
 LeftAtriumRealRemovedAppendage
-TheRock
 The code is not currently written for models with depth, but it does work with them. Use the 3D models with this in mind.
 3DIdealLAtrium2.3K
 3DIdealLAtrium2.3K_BB
@@ -81,5 +80,6 @@ All three should be floats.
 --BackGroundRed = 0.0;
 --BackGroundGreen = 0.0;
 --BackGroundBlue = 0.0;
+
 
 
