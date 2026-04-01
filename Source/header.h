@@ -1,6 +1,6 @@
 /*
  This file contains all include files, the #defines, structures and globals used in the simulation.
- All the functions are prototyped in this file as well.
+ Function prototypes are declared in module-specific headers.
 */
 
 // External include files
@@ -307,85 +307,4 @@ double CenterZ;
 double UpX; // What up means to the viewer
 double UpY;
 double UpZ;
-	
-// Prototyping functions start *****************************************************
-// Functions in the SVT.h file.
-void nBody(double);
-void allocateMemory();
-void readBasicSimulationSetupParameters();
-void readIntermediateSimulationSetupParameters();
-void readAdvancedSimulationSetupParameters();
-void setup();
-int main(int, char**);
-
-// Functions in the CUDAFunctions.h file.
-__device__ void turnOnNodeMusclesGPU(int, int, int, muscleAttributesStructure *, nodeAttributesStructure *);
-__global__ void getForces(muscleAttributesStructure *, nodeAttributesStructure *, float, int, float4, float, float, float, float);
-__global__ void updateNodes(nodeAttributesStructure *, int, int, muscleAttributesStructure *, float, float, float, bool);
-__global__ void updateMuscles(muscleAttributesStructure *, nodeAttributesStructure *, int, int, float, float4, float4, float4, float4);
-__global__ void recenter(nodeAttributesStructure *, int, float, float4);
-void cudaErrorCheck(const char *, int);
-void copyNodesMusclesToGPU();
-void copyNodesMusclesFromGPU();
-void copyNodesFromGPU();
-void copyNodesToGPU();
-
-// Functions in the setNodesAndMuscles.h file.
-void setNodesFromBlenderFile();
-void checkNodes();
-void setBachmannBundleFromBlenderFile();
-void setMusclesFromBlenderFile();
-void linkNodesToMuscles();
-double croppedRandomNumber(double, double, double);
-void findRadiusAndMassOfLeftAtrium();
-void setRemainingNodeAndMuscleAttributes();
-void getNodesandMusclesFromPreviousRun();
-void setRemainingParameters();
-void hardCodedAblations();
-void hardCodedPeriodicEctopicEvents();
-void hardCodedIndividualMuscleAttributes();
-void checkMuscle(int);
- 
-// Functions in the viewDrawAndTerminalFunctions.h file.
-void renderSphere(float, int, int);
-void createSphereVBO(float, int, int);
-void renderSphereVBO();
-void orthogonalView();
-void frustumView();
-float4 findCenterOfMass();
-void centerObject();
-void rotateXAxis(float);
-void rotateYAxis(float);
-void rotateZAxis(float);
-void ReferenceView();
-void PAView();
-void APView();
-void setView(int);
-void drawPicture();
-void createGUI();
-
-// Functions in the callBackFunctions.h file.
- void reshape(GLFWwindow* window, int width, int height);
- void mouseFunctionsOff();
- void mouseAblateMode();
- void mouseEctopicBeatMode();
- void mouseEctopicEventMode();
- void mouseAdjustMusclesAreaMode();
- void mouseAdjustMusclesLineMode();
- void mouseIdentifyNodeMode();
- void setEctopicBeat(int nodeId);
- void clearStdin();
- string getTimeStamp();
- void movieOn();
- void movieOff();
- void screenShot();
- void saveSettings();
- void saveState();
- void loadState();
- void findNodes();
- void KeyPressed(GLFWwindow* window, int key, int scancode, int action, int mods);
- void keyHeld(GLFWwindow* window);
- void mousePassiveMotionCallback(GLFWwindow* window, double x, double y);
- void myMouse(GLFWwindow* window, int button, int action, int mods);
- void scrollWheel(GLFWwindow* window, double xoffset, double yoffset);
 

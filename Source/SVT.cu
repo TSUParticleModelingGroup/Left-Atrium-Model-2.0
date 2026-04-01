@@ -18,6 +18,7 @@
 */
 
 // Local include files
+#include "./SVT.h"
 #include "./header.h"
 #include "./setNodesAndMuscles.h"
 #include "./callBackFunctions.h"
