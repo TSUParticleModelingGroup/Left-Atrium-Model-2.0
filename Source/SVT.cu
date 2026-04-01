@@ -24,6 +24,12 @@
 #include "./viewDrawAndTerminalFunctions.h"
 #include "./cudaFunctions.h"
 
+// Implementation units are included here to keep a single translation unit.
+#include "./setNodesAndMuscles.cu"
+#include "./callBackFunctions.cu"
+#include "./viewDrawAndTerminalFunctions.cu"
+#include "./cudaFunctions.cu"
+
 /*
  This function is called by the openGL idle function. Hence this function is called every time openGL is not doing anything else,
  which is most of the time.
