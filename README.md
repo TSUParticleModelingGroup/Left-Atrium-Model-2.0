@@ -86,6 +86,12 @@ Video Realistic Topology:				https://www.youtube.com/watch?v=y_ju9k7Y6So
 	sudo apt update
     sudo apt install nvidia-cuda-toolkit
 
+  If your screens are not getting recognized, you may try this and reboot:
+
+	sudo apt update
+    sudo apt install --reintstall nvidia-drivers-595-open
+	sudo reboot
+
   Install Mesa Utils:
 
 	sudo apt update
