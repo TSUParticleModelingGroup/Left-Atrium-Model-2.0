@@ -89,7 +89,7 @@ Video Realistic Topology:				https://www.youtube.com/watch?v=y_ju9k7Y6So
   If your screens are not getting recognized, you may try this and reboot:
 
 	sudo apt update
-    sudo apt install --reintstall nvidia-drivers-595-open
+    sudo apt install --rentstall nvidia-drivers-595-open
 	sudo reboot
 
   Install Mesa Utils:
